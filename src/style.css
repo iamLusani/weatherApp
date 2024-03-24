@@ -1,13 +1,10 @@
 body {
-  background: rgb(174, 238, 233);
-  background: radial-gradient(
-    circle,
-    rgba(174, 238, 233, 1) 0%,
-    rgba(148, 218, 233, 1) 44%
-  );
+  font-family: Truculenta;
+  background-color: #eef5ff;
 }
 header {
   text-align: center;
+  margin-top: 50px;
 }
 h1 {
   text-align: center;
@@ -15,37 +12,60 @@ h1 {
 ul {
   text-align: center;
   list-style: none;
+  font-family: Montserrat;
 }
 small {
   position: relative;
   bottom: 70px;
-  left: 300px;
+  left: 480px;
   font-size: 20px;
   font-weight: bold;
+  font-family: Montserrat;
 }
+hr {
+  height: -50px;
+  color: rgb(35, 105, 105);
+}
+
 .inputForm {
-  width: 250px;
-  height: 30px;
-  border-radius: 40px;
+  width: 350px;
+  height: 35px;
+  border-radius: 10px;
   color: #0c0801;
   background-color: #e6fffd;
+  margin-top: 30px;
+  border: 1px solid #e3dffd;
 }
 .searchForm {
   width: 100px;
-  height: 25px;
+  height: 35px;
   border-radius: 10px;
   background-color: #e3dffd;
+  border: 1px solid #e3dffd;
+}
+P {
+  color: #0696be;
+  margin-left: 20px;
 }
 .container {
-  width: 500px;
-  height: 200px;
-  border-radius: 30px;
+  width: 670px;
+  height: 560px;
+  border-radius: 20px;
   display: block;
   margin: 0 auto;
+  background: rgb(174, 238, 233);
+  background: radial-gradient(
+    circle,
+    rgb(158, 240, 233) 0%,
+    rgba(148, 218, 233, 1) 44%
+  );
+  box-shadow: -20px -12px 5px -6px rgba(48, 43, 176, 0.59) inset;
+  -webkit-box-shadow: -20px -12px 5px -6px rgba(48, 43, 176, 0.59) inset;
+  -moz-box-shadow: -20px -12px 5px -6px rgba(48, 43, 176, 0.59) inset;
 }
 footer {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 15px;
 }
 .numberUnit {
   font-size: 50px;
@@ -55,4 +75,12 @@ footer {
   font-size: 20px;
   position: relative;
   top: -20px;
+}
+.subNumberUnit {
+  margin-right: 17px;
+}
+.searchForm:hover {
+  background-color: #e6fffd;
+  color: #5bbaec;
+  font-weight: 900;
 }
