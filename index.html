@@ -4,22 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather forcast</title>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <header>
-      <form>
-        <input type="text" placeholder="Enter city...." />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <h1>Ermelo</h1>
-      <ul>
-        <li>18°C</li>
-        <li>22/13°C</li>
-      </ul>
-      <p>Partyl cloudy , humidity 73% , wind speed 12-13 km/hr</p>
-    </main>
+    <div class="container">
+      <header>
+        <form>
+          <input class="inputForm" type="text" placeholder="Enter city...." />
+          <input class="searchForm" type="submit" value="Search" />
+        </form>
+      </header>
+      <main>
+        <h1>Ermelo</h1>
+        <ul>
+          <li class="numberUnit">18 <span class="deg">°C</span></li>
+          <li>22/13°C</li>
+        </ul>
+        <p>
+          Partyl cloudy ☁️ <br />
+          humidity 73% 💧<br />
+          wind speed 12-13 km/hr💨
+        </p>
+        <small>
+          19:05 <br />
+          Sun, 24 Mar</small
+        >
+      </main>
+    </div>
     <footer>
       This project was coded by
       <a href="https://github.com/iamLusani" target="_blank"
