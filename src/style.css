@@ -23,8 +23,8 @@ small {
   font-family: Montserrat;
 }
 hr {
-  height: -50px;
-  color: rgb(35, 105, 105);
+  height: 2px;
+  background-color: #f7f1af;
 }
 
 .inputForm {
@@ -32,7 +32,7 @@ hr {
   height: 35px;
   border-radius: 10px;
   color: #0c0801;
-  background-color: #e6fffd;
+  background-color: rgb(253, 249, 242);
   margin-top: 30px;
   border: 1px solid #e3dffd;
 }
@@ -40,12 +40,14 @@ hr {
   width: 100px;
   height: 35px;
   border-radius: 10px;
-  background-color: #e3dffd;
+  background-color: whitesmoke;
   border: 1px solid #e3dffd;
+  transition: all 300ms ease-in-out;
 }
 P {
-  color: #0696be;
+  color: grey;
   margin-left: 20px;
+  font-weight: 500;
 }
 .container {
   width: 670px;
@@ -53,19 +55,20 @@ P {
   border-radius: 20px;
   display: block;
   margin: 0 auto;
-  background: rgb(174, 238, 233);
+  background: rgb(246, 208, 167);
   background: radial-gradient(
     circle,
-    rgb(158, 240, 233) 0%,
-    rgba(148, 218, 233, 1) 44%
+    rgba(246, 208, 167, 1) 0%,
+    rgba(233, 207, 151, 1) 100%
   );
-  box-shadow: -20px -12px 5px -6px rgba(48, 43, 176, 0.59) inset;
-  -webkit-box-shadow: -20px -12px 5px -6px rgba(48, 43, 176, 0.59) inset;
-  -moz-box-shadow: -20px -12px 5px -6px rgba(48, 43, 176, 0.59) inset;
+  box-shadow: -1px 29px 85px -6px rgba(227, 227, 17, 0.75);
+  -webkit-box-shadow: -1px 29px 85px -6px rgba(227, 227, 17, 0.75);
+  -moz-box-shadow: -1px 29px 85px -6px rgba(227, 227, 17, 0.75);
 }
+
 footer {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 45px;
 }
 .numberUnit {
   font-size: 50px;
@@ -75,12 +78,22 @@ footer {
   font-size: 20px;
   position: relative;
   top: -20px;
+  margin-left: 0;
 }
 .subNumberUnit {
   margin-right: 17px;
 }
 .searchForm:hover {
-  background-color: #e6fffd;
-  color: #5bbaec;
+  background-color: wheat;
+  color: #ecc55b;
   font-weight: 900;
+}
+.emoji {
+  font-size: 25px;
+  margin-left: 5px;
+}
+.weatherConditions {
+  color: beige;
+  font-weight: 1000;
+  font-size: 20px;
 }

@@ -36,35 +36,39 @@
       <main>
         <h1>Ermelo</h1>
         <ul>
-          <li class="numberUnit" id="numberUnit">
-            ☀️18 <span class="deg">°C</span>
+          <li class="numberUnit">
+            <span class="emoji">☀️</span>
+            <span id="numberUnit">18 </span>
+            <span class="deg">°C</span>
           </li>
           <li class="subNumberUnit">22/13°C</li>
         </ul>
         <p>
-          Partyl cloudy ☁️ <br />
-          humidity 73% 💧<br />
-          wind speed 12-13 km/hr💨
+          <span id="description">cloudy</span> <br />
+          <span>humidity</span>:
+          <span class="weatherConditions" id="humidity">16</span> 💧<br />
+          wind speed: <span class="weatherConditions" id="windSpeed">12-13 km/hr</span> 💨
         </p>
         <small>
           19:05 <br />
           Sun, 24 Mar</small
         >
       </main>
+      <hr />
+      <footer>
+        This project was coded by
+        <a href="https://github.com/iamLusani" target="_blank"
+          >Lusani Mphigalale </a
+        >and is open-sourced on
+        <a href="https://github.com/iamLusani/weatherApp" target="_blank"
+          >github</a
+        >
+        and hosted on
+        <a href="https://app.netlify.com/teams/iamlusani/sites" target="_blank"
+          >netlify</a
+        >
+      </footer>
     </div>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/iamLusani" target="_blank"
-        >Lusani Mphigalale </a
-      >and is open-sourced on
-      <a href="https://github.com/iamLusani/weatherApp" target="_blank"
-        >github</a
-      >
-      and hosted on
-      <a href="https://app.netlify.com/teams/iamlusani/sites" target="_blank"
-        >netlify</a
-      >
-    </footer>
     <script src="src/app.js"></script>
   </body>
 </html>
