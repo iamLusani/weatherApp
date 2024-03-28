@@ -68,6 +68,7 @@ footer {
 .numberUnit {
   font-size: 50px;
   font-weight: bold;
+  margin-top: 0px;
 }
 .deg {
   font-size: 20px;
@@ -77,18 +78,25 @@ footer {
 }
 .subNumberUnit {
   margin-right: 17px;
+  line-height: -100px;
 }
 .searchForm:hover {
   background-color: wheat;
   color: #ecc55b;
   font-weight: 900;
 }
-.emoji {
-  font-size: 25px;
-  margin-left: 5px;
+.emojiIcon {
+  font-size: 30px;
+  position: relative;
+  top: 35px;
+  left: 1px;
+  font-size: 50px;
 }
 .weatherConditions {
   color: #b4b4b8;
   font-weight: 1000;
   font-size: 20px;
+}
+.icon {
+  margin-top: 0px;
 }

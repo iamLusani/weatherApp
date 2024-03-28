@@ -4,9 +4,11 @@ function weatherApi(response) {
   let humTemperature = document.querySelector("#humidity");
   let speedTemperature = document.querySelector("#windSpeed");
   let timeElement = document.querySelector("#time");
-
   let temperature = response.data.temperature.current;
+  let iconElement = document.querySelector("#icon");
 
+  iconElement.innerHTML = `<img src ="${response.data.condition.icon_url}" class="emojiIcon"  />`;
+  console.log(response.data.condition.icon_url);
   speedTemperature.innerHTML = `${response.data.wind.speed}km/h`;
   humTemperature.innerHTML = `${response.data.temperature.humidity}%`;
   description.innerHTML = response.data.condition.description;
