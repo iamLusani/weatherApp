@@ -9,11 +9,29 @@ function weatherApi(response) {
 
   console.log(response.data.condition.description);
 
-  timeElement.innerHTML = `${date.getHours()}:`;
+  timeElement.innerHTML = functiondate(date);
   speedTemperature.innerHTML = `${response.data.wind.speed}km/h`;
   humTemperature.innerHTML = `${response.data.temperature.humidity}%`;
   description.innerHTML = response.data.condition.description;
   tempretureElement.innerHTML = Math.round(temperature);
+}
+
+function functiondate(date) {
+  let hours = date.getHours();
+  let minutes = data.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let day = days[date.getDay()];
+
+  return `${day} ${hours}:${minutes}`;
 }
 
 function searchPlace(city) {
