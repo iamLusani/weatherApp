@@ -55,12 +55,7 @@ P {
   border-radius: 20px;
   display: block;
   margin: 0 auto;
-  background: rgb(246, 208, 167);
-  background: radial-gradient(
-    circle,
-    rgba(246, 208, 167, 1) 0%,
-    rgba(233, 207, 151, 1) 100%
-  );
+  background-color: #f2efe5;
   box-shadow: -1px 29px 85px -6px rgba(227, 227, 17, 0.75);
   -webkit-box-shadow: -1px 29px 85px -6px rgba(227, 227, 17, 0.75);
   -moz-box-shadow: -1px 29px 85px -6px rgba(227, 227, 17, 0.75);
@@ -93,7 +88,7 @@ footer {
   margin-left: 5px;
 }
 .weatherConditions {
-  color: beige;
+  color: #b4b4b8;
   font-weight: 1000;
   font-size: 20px;
 }

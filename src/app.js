@@ -4,35 +4,32 @@ function weatherApi(response) {
   let humTemperature = document.querySelector("#humidity");
   let speedTemperature = document.querySelector("#windSpeed");
   let timeElement = document.querySelector("#time");
-  let date = new Date(response.data.time * 1000);
+
   let temperature = response.data.temperature.current;
 
-  console.log(response.data.condition.description);
-
-  timeElement.innerHTML = functiondate(date);
   speedTemperature.innerHTML = `${response.data.wind.speed}km/h`;
   humTemperature.innerHTML = `${response.data.temperature.humidity}%`;
   description.innerHTML = response.data.condition.description;
   tempretureElement.innerHTML = Math.round(temperature);
 }
+let now = new Date();
+let date = now.getDate();
+let hour = now.getHours();
+let minutes = now.getMinutes();
 
-function functiondate(date) {
-  let hours = date.getHours();
-  let minutes = data.getMinutes();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ];
-  let day = days[date.getDay()];
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+let day = days[now.getDay()];
 
-  return `${day} ${hours}:${minutes}`;
-}
+time.innerHTML = `${day} ${hour}:${minutes}`;
 
 function searchPlace(city) {
   let apiKey = "56ftc44o535ed4b849450cf23fa64b07";
