@@ -13,6 +13,8 @@ function weatherApi(response) {
   humTemperature.innerHTML = `${response.data.temperature.humidity}%`;
   description.innerHTML = response.data.condition.description;
   tempretureElement.innerHTML = Math.round(temperature);
+
+  getForecastData(response.data.city);
 }
 let now = new Date();
 let date = now.getDate();
@@ -48,7 +50,14 @@ function searchCity(event) {
   searchPlace(inputForm.value);
 }
 
-function displayForcast() {
+function getForecastData(city) {
+  let apikey = "56ftc44o535ed4b849450cf23fa64b07";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apikey}`;
+  axios.get(apiUrl).then(displayForcast);
+}
+
+function displayForcast(response) {
+  console.log(response.data);
   let forcastElement = document.querySelector("#forcast");
 
   let days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
@@ -74,4 +83,4 @@ function displayForcast() {
 let searchFormElement = document.querySelector("#searchForm");
 searchFormElement.addEventListener("submit", searchCity);
 
-displayForcast();
+searchPlace("Ermelo");
