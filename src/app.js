@@ -48,5 +48,30 @@ function searchCity(event) {
   searchPlace(inputForm.value);
 }
 
+function displayForcast() {
+  let forcastElement = document.querySelector("#forcast");
+
+  let days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+  let forcastHtml = "";
+
+  days.forEach(function (day) {
+    forcastHtml =
+      forcastHtml +
+      `<div class="allElements">
+            <div class="col-2">
+              <div class="days-of-the-week">${day}</div>
+              <div class="weatherIcons">☀️ <img src="" alt="" /></div>
+              <div class="subForcastNumber">
+                <span class="subForcastNumberMin">12 </span>/
+                <span class="subForcastNumberMax">29 </span>
+              </div>
+            </div>
+          `;
+  });
+  forcastElement.innerHTML = forcastHtml;
+}
+
 let searchFormElement = document.querySelector("#searchForm");
 searchFormElement.addEventListener("submit", searchCity);
+
+displayForcast();

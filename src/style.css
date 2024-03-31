@@ -104,6 +104,7 @@ footer {
 }
 .allElements {
   margin-left: 20px;
+  text-align: center;
 }
 .miniContainer {
   width: 750px;
@@ -120,11 +121,14 @@ footer {
   font-weight: 900;
 }
 .subForcastNumber {
-  color: #b4b4b8;
+  color: #69696b;
 }
 .subForcastNumberMin {
-  font-weight: 300;
+  font-weight: 500;
 }
 .subForcastNumberMax {
   font-weight: 900;
+}
+.col-2 {
+  display: grid;
 }
