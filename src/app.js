@@ -50,6 +50,13 @@ function searchCity(event) {
   searchPlace(inputForm.value);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function getForecastData(city) {
   let apikey = "56ftc44o535ed4b849450cf23fa64b07";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apikey}`;
@@ -60,22 +67,29 @@ function displayForcast(response) {
   console.log(response.data);
   let forcastElement = document.querySelector("#forcast");
 
-  let days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
   let forcastHtml = "";
 
-  days.forEach(function (day) {
-    forcastHtml =
-      forcastHtml +
-      `<div class="allElements">
+  response.data.daily.forEach(function (day, index) {
+    if (index < 4) {
+      forcastHtml =
+        forcastHtml +
+        `<div class="allElements">
             <div class="col-2">
-              <div class="days-of-the-week">${day}</div>
-              <div class="weatherIcons">☀️ <img src="" alt="" /></div>
+              <div class="days-of-the-week">${formatDay(day.time)}</div>
+              <div ><img src="${
+                day.condition.icon_url
+              }" class="weatherIcons" /></div>
               <div class="subForcastNumber">
-                <span class="subForcastNumberMin">12 </span>/
-                <span class="subForcastNumberMax">29 </span>
+                <span class="subForcastNumberMin">${Math.round(
+                  day.temperature.minimum
+                )}° </span>/
+                <span class="subForcastNumberMax">${Math.round(
+                  day.temperature.maximum
+                )}° </span>
               </div>
             </div>
           `;
+    }
   });
   forcastElement.innerHTML = forcastHtml;
 }

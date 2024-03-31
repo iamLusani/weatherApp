@@ -59,10 +59,11 @@ footer {
   border-radius: 20px;
   display: block;
   margin: 0 auto;
-  background-color: #f2efe5;
-  box-shadow: -1px 29px 85px -6px rgba(227, 227, 17, 0.75);
-  -webkit-box-shadow: -1px 29px 85px -6px rgba(227, 227, 17, 0.75);
-  -moz-box-shadow: -1px 29px 85px -6px rgba(227, 227, 17, 0.75);
+  background-color: #ffacac;
+  opacity: 70%;
+  box-shadow: 10px 10px 5px -4px rgba(232, 13, 171, 0.29);
+  -webkit-box-shadow: 10px 10px 5px -4px rgba(232, 13, 171, 0.29);
+  -moz-box-shadow: 10px 10px 5px -4px rgba(232, 13, 171, 0.29);
 }
 .icon {
   font-size: 10px;
@@ -109,12 +110,12 @@ footer {
 .miniContainer {
   width: 750px;
   height: 100px;
-  background-color: #f9f5f6;
+  background-color: #ffa1f5;
   border-radius: 20px;
-  opacity: 50%;
-  box-shadow: 10px 10px 5px 0px rgba(247, 227, 232, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(247, 227, 232, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(247, 227, 232, 0.75);
+  opacity: 100%;
+  box-shadow: 10px 41px 188px 10px rgba(252, 229, 241, 0.73);
+  -webkit-box-shadow: 10px 41px 188px 10px rgba(252, 229, 241, 0.73);
+  -moz-box-shadow: 10px 41px 188px 10px rgba(252, 229, 241, 0.73);
 }
 .days-of-the-week {
   font-size: 20px;
@@ -130,5 +131,11 @@ footer {
   font-weight: 900;
 }
 .col-2 {
-  display: grid;
+  float: left;
+  width: 25%;
+}
+.weatherIcons {
+  height: 38px;
+  width: 38px;
+  font-weight: 900;
 }
